@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form method="POST" action="http://localhost:3000/chats/">
+      <label for="from">From:</label>
+      <input id="from" placeholder="Add from" name="from" />
+      <br />
+      <br />
+      <label for="to">To:</label>
+      <input id="to" placeholder="Send to" name="to" />
+      <br />
+      <br />
+      <label for="msg">Add Your message:</label>
+      <br />
+      <br />
+      <textarea
+        id="msg"
+        placeholder="Add your message"
+        rows="10"
+        cols="50"
+        name="message"
+      ></textarea>
+      <br />
+      <br />
+      <button>Submit</button>
+    </form>
+  </body>
+</html>

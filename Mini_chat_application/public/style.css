@@ -1,0 +1,9 @@
+body {
+  background-color: rgb(230, 251, 255);
+}
+button {
+  cursor: pointer;
+}
+h1 {
+  text-align: center;
+}

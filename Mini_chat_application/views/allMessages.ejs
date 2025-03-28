@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css"/>
+    <title>Mini Chat App</title>
+  </head>
+  <body>
+    <h1>All Chats </h1>
+    <% for(let i = 0;i < data.length ;i++ ) { %>
+    <div>
+      <p>from: <%= data[i].from %></p>
+      <p>to: <%=data[i].to %></p>
+      <p>message: <%= data[i].message %>
+        <form method="GET" action="/chats/<%= data[i].id %>/edit"><button>Edit</button></form>
+      </p>
+      <p><%= data[i].createdAt.toString().split(" ").slice(0,4).join(" ")%></p>
+       <form method="POST" action="/chats/<%= data[i].id %>?_method=DELETE" class="delete-form" ><button>Delete</button></form>
+    </div>
+    <hr />
+    <br />
+    <% } %>
+    <form method="GET" action="http://localhost:3000/chats/form">
+      <button type="submit">Add chat</button>
+    </form>
+    <script src="/app.js"></script>
+  </body>
+</html>
